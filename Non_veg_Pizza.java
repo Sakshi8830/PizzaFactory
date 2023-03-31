@@ -8,6 +8,9 @@ public class Non_veg_Pizza {
 	Non_veg_Pizza v;
 	Basic_pizza bp=new Basic_pizza();
 	Common_menu cp=new Common_menu();
+	Pizza_Bill pb=new Pizza_Bill();
+	int nonvegtotal=0;
+	
 	
 	private String size;
 	private int prize;
@@ -54,17 +57,21 @@ public class Non_veg_Pizza {
                 		case 1:
                 			size_cost=190;
                 			cp.getCrust();
-                			bp.getNonVegPizzaToppingDetails();
+                			//bp.getNonVegPizzaToppingDetails();
+                			nonvegtotal=size_cost+bp.getNonVegPizzaToppingDetails();
+                			pb.getNonVegBill(nonvegtotal);
                             break;
                 		case 2:
                 			size_cost=325;
                 			cp.getCrust();
-                			bp.getNonVegPizzaToppingDetails();
-                			break;
+                			nonvegtotal=size_cost+bp.getNonVegPizzaToppingDetails();
+                			pb.getNonVegBill(nonvegtotal);                			break;
                 		case 3:
                 			size_cost=425;
                 			cp.getCrust();
                 			bp.getNon_VegLargeTop();
+                			nonvegtotal=size_cost;
+                			pb.getNonVegBill(nonvegtotal);
                 			break;
                 	}
         		break;
@@ -75,16 +82,21 @@ public class Non_veg_Pizza {
             		case 1:
             			size_cost=210;
             			cp.getCrust();
-            			bp.getNonVegPizzaToppingDetails();
+            			nonvegtotal=size_cost+bp.getNonVegPizzaToppingDetails();
+            			pb.getNonVegBill(nonvegtotal);
+            			break;
             		case 2:
             			size_cost=370;
             			cp.getCrust();
-            			bp.getNonVegPizzaToppingDetails();
+            			nonvegtotal=size_cost+bp.getNonVegPizzaToppingDetails();
+            			pb.getNonVegBill(nonvegtotal);
             			break;
             		case 3:
             			size_cost=500;
             			cp.getCrust();
             			bp.getNon_VegLargeTop();
+            			nonvegtotal=size_cost;
+            			pb.getNonVegBill(nonvegtotal);
             			break;
             	}
         		break;
@@ -95,24 +107,26 @@ public class Non_veg_Pizza {
             		case 1:
             			size_cost=220;
             			cp.getCrust();
-            			bp.getNonVegPizzaToppingDetails();
+            			nonvegtotal=size_cost+bp.getNonVegPizzaToppingDetails();
+            			pb.getNonVegBill(nonvegtotal);
             		case 2:
             			size_cost=380;
             			cp.getCrust();
-            			bp.getNonVegPizzaToppingDetails();
+            			nonvegtotal=size_cost+bp.getNonVegPizzaToppingDetails();
+            			pb.getNonVegBill(nonvegtotal);
             			break;
             		case 3:
             			size_cost=525;
             			cp.getCrust();
             			bp.getNon_VegLargeTop();
+            			nonvegtotal=size_cost;
+            			pb.getNonVegBill(nonvegtotal);
             			break;
             	}
         		break;
         }
       
         
-        cp.getExtraCheese();
-        cp.getSides();
 	}
 	
 	
