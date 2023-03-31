@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Basic_pizza {
 	
-	static Scanner scanner=new Scanner(System.in)
+	static Scanner scanner=new Scanner(System.in);
 	
 	
 	private String topping;
