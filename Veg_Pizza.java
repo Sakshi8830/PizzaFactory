@@ -71,14 +71,17 @@ public class Veg_Pizza {
                 		case 2:
                 			size_cost=200;
                 			cp.getCrust();
-                			bp.getVegPizzaToppingDetails();
+                			//bp.getVegPizzaToppingDetails();
                 			total=size_cost+bp.getVegPizzaToppingDetails();
+                			pb.getBill(total);
                 			break;
                 			
                 		case 3:
                 			size_cost=325;
                 			cp.getCrust();
                 			bp.getVegLargeTop();
+                			total=size_cost;
+                			pb.getBill(total);
                 			break;
                 		
                 		case 4:
@@ -95,19 +98,23 @@ public class Veg_Pizza {
             		case 1:
             			size_cost=175;
             			cp.getCrust();
-            			bp.getVegPizzaToppingDetails();
+            			total=size_cost+bp.getVegPizzaToppingDetails();
+            			pb.getBill(total);
             			break;
             			
             		case 2:
             			size_cost=375;
             			cp.getCrust();
-            			bp.getVegPizzaToppingDetails();
+            			total=size_cost+bp.getVegPizzaToppingDetails();
+            			pb.getBill(total);
             			break;
             			
             		case 3:
             			size_cost=475;
             			cp.getCrust();
             			bp.getVegLargeTop();
+            			total=size_cost;
+            			pb.getBill(total);
             			break;
             			
             		case 4:
@@ -122,16 +129,20 @@ public class Veg_Pizza {
             		case 1:
             			size_cost=160;
             			cp.getCrust();
-            			bp.getVegPizzaToppingDetails();
+            			total=size_cost+bp.getVegPizzaToppingDetails();
+            			pb.getBill(total);
             		case 2:
             			size_cost=290;
             			cp.getCrust();
-            			bp.getVegPizzaToppingDetails();
+            			total=size_cost+bp.getVegPizzaToppingDetails();
+            			pb.getBill(total);
             			break;
             		case 3:
             			size_cost=340;
             			cp.getCrust();
             			bp.getVegLargeTop();
+            			total=size_cost;
+            			pb.getBill(total);
             			break;
             			
             		case 4:
@@ -143,8 +154,6 @@ public class Veg_Pizza {
         		default: break;
         }
        
-        //cp.getExtraCheese();
-        //cp.getSides();
         
        
 	}
